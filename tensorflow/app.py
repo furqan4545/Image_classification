@@ -259,7 +259,7 @@ def upload():
             return jsonify(retJson)
 
         elif 'link' in request.form:
-
+            url = request.form["url"]
             r = requests.get(url)
             with open("temp.jpg", "wb") as f:
                 f.write(r.content)
